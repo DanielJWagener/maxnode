@@ -1,0 +1,23 @@
+{
+	"name": "maxnode",
+	"version": "1.0.0",
+	"description": "Node.js course",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DanielJWagener/maxnode.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/DanielJWagener/maxnode/issues"
+	},
+	"homepage": "https://github.com/DanielJWagener/maxnode#readme",
+	"devDependencies": {
+		"nodemon": "^2.0.22"
+	}
+}
