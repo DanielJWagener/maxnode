@@ -20,11 +20,9 @@ exports.getAdminProducts = (req, res, next) => {
 
 exports.getEditProduct = (req, res, next) => {
 	const editMode = req.query.edit === "true";
-	console.log({ editMode });
 	if (!editMode) return res.redirect("/");
 	const prodId = req.params.productId;
 	Product.findById(prodId, (product) => {
-		console.log({ product });
 		if (!product) {
 			return res.redirect("/");
 		}
@@ -45,6 +43,7 @@ exports.postEditProduct = (req, res, next) => {
 	const updatedDescription = req.body.description;
 	const updatedProduct = new Product(prodId, updatedTitle, updatedImage, updatedDescription, updatedPrice);
 	updatedProduct.save();
+	res.redirect("/admin/products");
 };
 
 exports.postAddProduct = (req, res, next) => {
@@ -55,4 +54,10 @@ exports.postAddProduct = (req, res, next) => {
 	const product = new Product(null, title, imageUrl, description, price);
 	product.save();
 	res.redirect("/");
+};
+
+exports.postDeleteProduct = (req, res, next) => {
+	const prodId = req.body.productId;
+	Product.deleteById(prodId);
+	res.redirect("/admin/products");
 };

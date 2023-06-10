@@ -1,16 +1,1 @@
-[
-	{
-		"id": "0.123",
-		"title": "A Book!",
-		"imageUrl": "https://www.publicdomainpictures.net/pictures/360000/velka/book-15946637087ey.jpg",
-		"description": "Amazing freaking book",
-		"price": "11"
-	},
-	{
-		"title": "Another Product",
-		"imageUrl": "https://www.publicdomainpictures.net/pictures/360000/velka/book-15946637087ey.jpg",
-		"description": "Woahhhhhh",
-		"price": "15",
-		"id": "0.6947811953996359"
-	}
-]
+[{"id":"0.123","title":"A Book!","imageUrl":"https://www.publicdomainpictures.net/pictures/360000/velka/book-15946637087ey.jpg","description":"Amazing freaking book","price":"11"},{"id":"0.6947811953996359","title":"Another Product","imageUrl":"https://www.publicdomainpictures.net/pictures/360000/velka/book-15946637087ey.jpg","description":"Woahhhhhh","price":"15.02"}]
