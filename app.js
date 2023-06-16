@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res, next) => {
-	User.findById(1)
+	User.findByPk(1)
 		.then((user) => {
 			req.user = user;
 			next();
@@ -41,14 +41,14 @@ Product.belongsTo(User, {
 User.hasMany(Product);
 
 sequelize
-	.sync({ force: true })
+	.sync()
 	.then((result) => {
 		return User.findByPk(1);
 	})
 	.then((user) => {
 		if (!user) {
 			return User.create({
-				name: "Max",
+				name: "Daniel",
 				email: "djw@djw.com",
 			});
 		}
